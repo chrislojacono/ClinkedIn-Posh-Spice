@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ClinkedIn.Models;
+using Microsoft.Data.SqlClient;
+using Dapper;
 
 namespace ClinkedIn.DataAccess
 {
@@ -65,6 +67,7 @@ namespace ClinkedIn.DataAccess
         
         public List<Member> GetAllMembers()
         {
+
             return _allMembers;
         }
 
