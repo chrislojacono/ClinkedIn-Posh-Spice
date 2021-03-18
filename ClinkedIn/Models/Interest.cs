@@ -9,7 +9,19 @@ namespace ClinkedIn.Models
     {
         public int Id { get; set; }
         public string Interests { get; set; }
-        public string Type { get; set; }
+        public InterestType Type { get; set; }
         
+    }
+
+    public enum InterestType
+    {
+        Cooking,
+        Writing,
+        Adventure,
+        Gardening,
+        Violence,
+        Exercise,
+        Gaming,
+        Arts
     }
 }
