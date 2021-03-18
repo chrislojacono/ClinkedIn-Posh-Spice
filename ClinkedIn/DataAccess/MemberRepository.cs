@@ -64,11 +64,21 @@ namespace ClinkedIn.DataAccess
                     Sentence = 404,
                 },
             };
-        
+
+        const string ConnectionString = "Server=localhost;Database=ClinkedIn;Trusted_Connection=True";
+
         public List<Member> GetAllMembers()
         {
+            using var connection = new SqlConnection(ConnectionString);
 
-            return _allMembers;
+            var sql = @"select * 
+                        from Members";
+
+            var results = connection.Query<Member>(sql).ToList();
+            //Name of properties HAVE to be the same as the names in SQL
+
+            return results;
+            
         }
 
         public void AddAMember(Member member)
