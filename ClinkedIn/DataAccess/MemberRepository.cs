@@ -89,8 +89,15 @@ namespace ClinkedIn.DataAccess
         }
         public Member GetAMember(int id)
         {
-            var member = _allMembers.FirstOrDefault(memb => memb.InmateId == id);
-            return member;
+            var sql = @"select *
+                        from Members
+                        Where Id = @Id";
+
+            using var db = new SqlConnection(ConnectionString);
+
+            var loaf = db.QueryFirstOrDefault<Member>(sql, new { Id = id });
+
+            return loaf;
         }
 
         public void RemoveAMember(int id)
