@@ -33,7 +33,7 @@ namespace ClinkedIn.DataAccess
             using var db = new SqlConnection(ConnectionString);
 
             var sql = @"INSERT INTO [dbo].[Members]([Name],[Sentence])
-                        OUTPUT inserted.Id
+                        OUTPUT inserted.InmateId
                         VALUES(@Name,@Sentence)";
             var id = db.ExecuteScalar<int>(sql, member);
 
