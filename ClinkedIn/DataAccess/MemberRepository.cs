@@ -75,7 +75,7 @@ namespace ClinkedIn.DataAccess
                         from Members";
 
             var results = connection.Query<Member>(sql).ToList();
-            //Name of properties HAVE to be the same as the names in SQL
+         
 
             return results;
             
