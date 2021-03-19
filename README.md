@@ -3,7 +3,7 @@
 
 You are an intrepid entrepreneur in the niche social network space.  Your latest trillion dollar idea is ClinkedIn, a social network for prisons.  This social network will allow inmates to create inmate accounts with their personal details, including why they're in prison, as well as to socialize and find friends with similar criminal interests.  You'll also be wanting a way to monetize this app, so having a section that allows for the listing of services is your entryway to the real money.  
 
-You'll be building this in teams, and we're only concerned with building the API right now. 
+You'll be building this in teams, and we're only concerned with building the API right now
 
 ## Example Repository Class
 
